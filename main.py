@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from io import *
-import xlsxwriter
 
 
 def find_chain(df, start_index):
