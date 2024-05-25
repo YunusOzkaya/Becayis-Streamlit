@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from io import *
+import io
 
 
 def find_chain(df, start_index):
@@ -72,7 +72,7 @@ def process_chain(df, chain):
 
 
 def to_excel(df):
-    output = BytesIO()
+    output = io.BytesIO()
     writer = pd.ExcelWriter(output, engine="xlsxwriter")
     df.to_excel(writer, index=False)
     writer.close()
